@@ -6,6 +6,7 @@ use App\Models\Author;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        $author = Author::all();
+        return view('author.index' , compact('author'));
     }
 
     /**
@@ -36,6 +38,7 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
